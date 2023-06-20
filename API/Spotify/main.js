@@ -50,8 +50,8 @@ function GetPlayData(){
         .then(data => {
           // Access the user data
             if(data.is_playing){
-                var currentPlaying = data.item.name;
-                var currentArtist = data.item.artists[0].name;
+                var currentPlaying = data.item.TrackObject.name;
+                var currentArtist = data.item.TrackObject.artists[0].name;
                 document.getElementById("Final").innerHTML = 'Now Playing: ' + currentPlaying;
             }
             else{
