@@ -1,5 +1,14 @@
-<script>
-  const accessToken = window.location.hash.substr(1).split('&')[0].split('=')[1];
-  localStorage.setItem('spotifyAccessToken', accessToken);
-  window.location.href = 'index.html'; // Redirect to your main application page
-</script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      setTimeout(3s)
+      const accessToken = window.location.hash.substr(1).split('&')[0].split('=')[1];
+      localStorage.setItem('spotifyAccessToken', accessToken);
+      window.location.href = 'index.html'; // Redirect to your main application page
+    </script>
+  </head>
+  <body>
+    <h1>Retrieving Access Token to run this application...</h1>
+  </body>
+</html>
