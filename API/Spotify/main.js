@@ -29,11 +29,10 @@ window.addEventListener('DOMContentLoaded', function() {
   var accessToken = localStorage.getItem('spotifyAccessToken');
   if (accessToken) {
       console.log(accessToken)
-      GetUserData(accessToken)
   }
 });
 
-function GetUserData(accessToken){}
+function GetUserData(){}
     fetch('https://api.spotify.com/v1/me', {
             headers: {
                 'Authorization': 'Bearer' + accessToken
