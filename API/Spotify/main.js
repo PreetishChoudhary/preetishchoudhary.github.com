@@ -39,3 +39,24 @@ function GetUserData(){}
         .catch(error => {
           console.error('Error:', error);
         });
+
+function GetPlayData(){
+    fetch('https://api.spotify.com/v1/me/player', {
+            method: "GET",
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),
+                    'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+          // Access the user data
+            var currentPlaying = data.item.name;
+    
+          // Do something with the username and profile picture
+          document.getElementById("Final").innerHTML = 'Now Playing: ' + currentPlaying;
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+}
