@@ -28,9 +28,7 @@ function GetUserData(){}
         .then(data => {
           // Access the user data
             var username = data.display_name;
-            console.log(username);
             var profilePicture = data.images[0].url;
-            console.log(profilePicture)
     
           // Do something with the username and profile picture
           document.getElementById("Test").innerHTML = 'Username: ' + username;
@@ -54,10 +52,11 @@ function GetPlayData(){
             if(data.is_playing){
                 var currentPlaying = data.item.name;
                 var currentArtist = data.item.artists[0].name;
+                document.getElementById("Final").innerHTML = 'Now Playing: ' + currentPlaying;
             }
-    
-          // Do something with the username and profile picture
-          document.getElementById("Final").innerHTML = 'Now Playing: ' + currentPlaying;
+            else{
+                document.getElementById("Final").innerHTML = "Player Offline"
+            }
         })
         .catch(error => {
           console.error('Error:', error);
