@@ -36,7 +36,8 @@ function GetUserData(){}
     fetch('https://api.spotify.com/v1/me', {
             method: "GET",
             headers: {
-                'Authorization': 'Bearer' + localStorage.getItem('spotifyAccessToken')
+                'Authorization': 'Bearer' + localStorage.getItem('spotifyAccessToken'),
+                'Content-Type': 'application/json'
             }
         })
         .then(response => response.json())
