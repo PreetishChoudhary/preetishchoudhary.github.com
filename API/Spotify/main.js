@@ -50,5 +50,5 @@ function GetUserData(){}
           document.getElementById("ProfilePicture").src = profilePicture;
         })
         .catch(error => {
-          console.error('Error:', error);
+          console.log('Error:', error);
         });
