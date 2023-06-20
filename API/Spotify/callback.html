@@ -1,0 +1,5 @@
+<script>
+  const accessToken = window.location.hash.substr(1).split('&')[0].split('=')[1];
+  localStorage.setItem('spotifyAccessToken', accessToken);
+  window.location.href = 'index.html'; // Redirect to your main application page
+</script>
