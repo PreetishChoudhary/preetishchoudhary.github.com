@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Thingo</title>
-    </head>
-    <body>
-        <button onclick="callAPI()"><p>Click me</p></button>
-        <p id="Test">Test</p>
-        <button onclick="Oauth()"><p>Click me</p></button>
-        <p id="Auth">Auth</p>
-        <img id="ProfilePicture">
-        <button onclick="GetUserData()"><p>Click me</p></button>
-        <p id="Final">Test</p>
-        
-        <script src="main.js"></script>
-    </body>
-    <footer>
-        <p>This application was created using <a href="https://developer.spotify.com/">Spotify API</a>.</p>
-    </footer>
+<head>
+    <title>Thingo</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <button onclick="callAPI()"><p>Click me</p></button>
+    <p id="Test">Test</p>
+    <button onclick="Oauth()"><p>Click me</p></button>
+    <p id="Auth">Auth</p>
+    <img id="ProfilePicture">
+    <button onclick="GetUserData()"><p>Click me</p></button>
+    <p id="Final">Test</p>
+    
+    <h2>Recently Played</h2>
+    <ul id="RecentlyPlayed"></ul>
+
+    <script src="main.js"></script>
+</body>
+<footer>
+    <p>This application was created using <a href="https://developer.spotify.com/">Spotify API</a>.</p>
+</footer>
 </html>
