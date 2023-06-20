@@ -42,16 +42,19 @@ function GetUserData(){}
 
 function GetPlayData(){
     fetch('https://api.spotify.com/v1/me/player', {
-            method: "GET",
-            headers: {
-                'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),
-                    'Content-Type': 'application/json'
-            }
-        })
+        method: "GET",
+        headers: {
+            'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),
+                'Content-Type': 'application/json'
+        }
+    })
         .then(response => response.json())
         .then(data => {
           // Access the user data
-            var currentPlaying = data.item.name;
+            if(data.is_playing){
+                var currentPlaying = data.item.name;
+                var currentArtist = data.item.artists[0].name;
+            }
     
           // Do something with the username and profile picture
           document.getElementById("Final").innerHTML = 'Now Playing: ' + currentPlaying;
