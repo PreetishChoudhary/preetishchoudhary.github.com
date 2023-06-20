@@ -16,7 +16,7 @@ function callAPI(){
 
 function Oauth(){
     const clientId = 'd9a800ac4ead4627ab1280e84dc5593c';
-    const redirectUri = 'https://preetishchoudhary.github.io/callback.html';
+    const redirectUri = 'https://preetishchoudhary.github.io/API/Spotify/callback.html';
     const responseType = 'token';
     const scopes = 'user-read-private user-read-email'; // Add the required scopes
 
