@@ -2,7 +2,7 @@ function Oauth(){
     const clientId = 'd9a800ac4ead4627ab1280e84dc5593c';
     const redirectUri = 'https://preetishchoudhary.github.io/API/Spotify/callback.html';
     const responseType = 'token';
-    const scopes = 'user-read-private user-read-email'; // Add the required scopes
+    const scopes = 'user-read-private user-read-email user-read-playback-state user-read-recently-played'; // Add the required scopes
 
     const authorizationUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=${responseType}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scopes)}`;
 
