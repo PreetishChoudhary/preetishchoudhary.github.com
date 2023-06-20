@@ -22,15 +22,29 @@ function Oauth(){
 
     const authorizationUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=${responseType}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scopes)}`;
 
-    alert('Redirecting...')
-    // Redirect the user to the authorization URL
     window.location.href = authorizationUrl;
 }
 
 window.addEventListener('DOMContentLoaded', function() {
   var accessToken = localStorage.getItem('spotifyAccessToken');
   if (accessToken) {
-    // Redirect occurred and access token is available
-    alert('Redirect successful! Access token: ' + accessToken);
+    fetch('https://api.spotify.com/v1/me', {
+        headers: {
+            'Authorization': 'Bearer' + accesstoken
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Access the user data
+      var username = data.display_name;
+      var profilePicture = data.images[0].url;
+
+      // Do something with the username and profile picture
+      console.log('Username: ' + username);
+      console.log('Profile Picture: ' + profilePicture);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
   }
 });
