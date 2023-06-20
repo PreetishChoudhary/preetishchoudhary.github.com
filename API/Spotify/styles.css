@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+p {
+    margin-top: 10px;
+}
+
+#ProfilePicture {
+    max-width: 200px;
+}
