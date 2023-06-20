@@ -28,24 +28,27 @@ function Oauth(){
 window.addEventListener('DOMContentLoaded', function() {
   var accessToken = localStorage.getItem('spotifyAccessToken');
   if (accessToken) {
-    fetch('https://api.spotify.com/v1/me', {
-        method: 'GET',
-        headers: {
-            'Authorization': 'Bearer' + accesstoken
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Access the user data
-      var username = data.display_name;
-      var profilePicture = data.images[0].url;
-
-      // Do something with the username and profile picture
-      document.getElementById("Oauth").innerHTML = 'Username: ' + username;
-      console.log('Profile Picture: ' + profilePicture);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
+      GetUserData()
   }
 });
+
+function GetUserData(){}
+    fetch('https://api.spotify.com/v1/me', {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer' + accesstoken
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+          // Access the user data
+          var username = data.display_name;
+          var profilePicture = data.images[0].url;
+    
+          // Do something with the username and profile picture
+          document.getElementById("Test").innerHTML = 'Username: ' + username;
+          console.log('Profile Picture: ' + profilePicture);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
