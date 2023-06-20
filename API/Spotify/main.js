@@ -22,6 +22,7 @@ function Oauth(){
 
     const authorizationUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=${responseType}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scopes)}`;
 
+    alert('Redirecting...')
     // Redirect the user to the authorization URL
     window.location.href = authorizationUrl;
 }
