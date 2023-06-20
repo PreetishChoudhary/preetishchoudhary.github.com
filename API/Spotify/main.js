@@ -41,8 +41,9 @@ function GetUserData(){}
         .then(response => response.json())
         .then(data => {
           // Access the user data
-          var username = data.display_name;
-          var profilePicture = data.images[0].url;
+            var username = data.display_name;
+            console.log(username);
+            var profilePicture = data.images[0].url;
     
           // Do something with the username and profile picture
           document.getElementById("Test").innerHTML = 'Username: ' + username;
