@@ -36,7 +36,7 @@ function GetUserData(){}
     fetch('https://api.spotify.com/v1/me', {
             method: 'GET',
             headers: {
-                'Authorization': 'Bearer' + accesstoken
+                'Authorization': 'Bearer' + accessToken
             }
         })
         .then(response => response.json())
