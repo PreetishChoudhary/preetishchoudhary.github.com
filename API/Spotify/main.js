@@ -24,19 +24,11 @@ function Oauth(){
 
     // Redirect the user to the authorization URL
     window.location.href = authorizationUrl;
+}
 
-    const accessToken = localStorage.getItem('spotifyAccessToken');
-      // Use the access token to make requests to the Spotify API
-      // Example:
-      fetch('https://api.spotify.com/v1/me', {
-        headers: {
-          Authorization: `Bearer ${accessToken}`
-        }
-      })
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById("Oauth").innerHTML = data;
-        // Handle the response data
-      });
-
+window.onload = function{
+    var accesstoken = localstorage.getItem('spotifyAccessToken');
+    if (accesstoken) {
+        alert('Redirect successful!')
+    }
 }
