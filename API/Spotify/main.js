@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function() {
       var profilePicture = data.images[0].url;
 
       // Do something with the username and profile picture
-      console.log('Username: ' + username);
+      document.getElementById("Oauth").innerHTML = 'Username: ' + username;
       console.log('Profile Picture: ' + profilePicture);
     })
     .catch(error => {
