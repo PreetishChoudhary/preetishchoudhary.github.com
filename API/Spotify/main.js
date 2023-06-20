@@ -26,9 +26,10 @@ function Oauth(){
     window.location.href = authorizationUrl;
 }
 
-window.onload = function{
-    var accesstoken = localstorage.getItem('spotifyAccessToken');
-    if (accesstoken) {
-        alert('Redirect successful!')
-    }
-}
+window.addEventListener('DOMContentLoaded', function() {
+  var accessToken = localStorage.getItem('spotifyAccessToken');
+  if (accessToken) {
+    // Redirect occurred and access token is available
+    alert('Redirect successful! Access token: ' + accessToken);
+  }
+});
