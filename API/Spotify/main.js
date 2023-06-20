@@ -28,7 +28,7 @@ function Oauth(){
 window.addEventListener('DOMContentLoaded', function() {
   var accessToken = localStorage.getItem('spotifyAccessToken');
   if (accessToken) {
-    await fetch('https://api.spotify.com/v1/me', {
+    fetch('https://api.spotify.com/v1/me', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer' + accesstoken
