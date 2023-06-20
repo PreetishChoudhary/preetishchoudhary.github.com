@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', function() {
 function GetUserData(){}
     fetch('https://api.spotify.com/v1/me', {
             headers: {
-                'Authorization': 'Bearer' + accessToken
+                'Authorization': 'Bearer' + localStorage.getItem('spotifyAccessToken')
             }
         })
         .then(response => response.json())
