@@ -30,6 +30,7 @@ function GetUserData(){}
             var username = data.display_name;
             console.log(username);
             var profilePicture = data.images[0].url;
+            console.log(profilePicture)
     
           // Do something with the username and profile picture
           document.getElementById("Test").innerHTML = 'Username: ' + username;
