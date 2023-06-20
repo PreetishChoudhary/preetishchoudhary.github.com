@@ -35,7 +35,7 @@ function Oauth(){
       })
       .then(response => response.json())
       .then(data => {
-        console.log(data);
+        document.getElementById("Oauth").innerHTML = data;
         // Handle the response data
       });
 
