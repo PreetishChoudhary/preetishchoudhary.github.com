@@ -82,7 +82,9 @@ function Player(){
         })
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Request failed with status ' + response.status);
+                    return response.json().then(errorData => {
+                        throw new Error('Failed to resume playback. Status: ' + response.status +'. Error: ' + errorData.error.message);
+                    })
                 }
                 document.getElementById("playToggle").innerHTML = "Play"
                 console.log('Playback paused.');
@@ -101,8 +103,10 @@ function Player(){
             }
         })
         .then(response => {
-            if(!response.ok) {
-                throw new Error('Request failed with status ' + response.status);
+            if (!response.ok) {
+                return response.json().then(errorData => {
+                    throw new Error('Failed to resume playback. Status: ' + response.status +'. Error: ' + errorData.error.message);
+                })
             }
             document.getElementById("playToggle").innerHTML = "Pause"
             console.log('playback resumed');
