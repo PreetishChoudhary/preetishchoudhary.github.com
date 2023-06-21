@@ -17,6 +17,8 @@ body {
 #playingText{
     font-size: 16px;
     text-align: center;
+    padding-top: auto;
+    padding-bottom: auto;
 }
 
 button {
