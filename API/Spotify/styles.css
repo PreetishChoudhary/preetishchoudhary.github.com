@@ -7,7 +7,7 @@ body {
 #player {
     height: 120px;
     width: 90%;
-    background-image: gradient(135deg, #2d4235, #2d4a38);
+    background-image: linear-gradient(135deg, #2d4235, #2d4a38);
     color: #82b395;
     padding: none;
     margin-left: auto;
