@@ -6,12 +6,17 @@ body {
 
 #player {
     height: 120px;
-    width: 70%;
+    width: 80%;
     background-color: #2d4235;
     color: #82b395;
     padding: none;
     margin-left: auto;
     margin-right: 0;
+}
+
+#playingText{
+    font-size: 16px;
+    text-align: center;
 }
 
 button {
