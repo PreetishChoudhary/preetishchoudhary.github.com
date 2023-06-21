@@ -4,12 +4,14 @@ body {
     padding: none;
 }
 
-header {
+#player {
     height: 120px;
-    width: 100%;
+    width: 70%;
     background-color: #2d4235;
     color: #82b395;
     padding: none;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 button {
