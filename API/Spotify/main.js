@@ -43,7 +43,7 @@ function GetPlayData(){
         method: "GET",
         headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),
-                'Content-Type': 'application/json'
+            'Content-Type': 'application/json'
         }
     })
         .then(response => {
@@ -73,7 +73,13 @@ function GetPlayData(){
 function Player(){
     if(document.getElementById("playToggle").innerHTML == "Pause"){
         console.log("Pausing...")
-        fetch('https://api.spotify.com/v1/me/player/pause', {method: "PUT", headers: {'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),'Content-Type': 'application/json'}})
+        fetch('https://api.spotify.com/v1/me/player/pause', {
+            method: "PUT",
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),
+                'Content-Type': 'application/json'
+            }
+        })
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Request failed with status ' + response.status);
@@ -87,7 +93,7 @@ function Player(){
     }
     else if(document.getElementById("playToggle").innerHTML == "Play"){
         console.log("Playing...")
-        fetch('https://api.spotify.com/v1/me/player/pause', {
+        fetch('https://api.spotify.com/v1/me/player/play', {
             method: "PUT",
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),
