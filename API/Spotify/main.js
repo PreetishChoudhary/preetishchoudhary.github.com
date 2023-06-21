@@ -59,7 +59,7 @@ function GetPlayData(){
                 var currentPlaying = data.item.name;
                 var currentArtist = data.item.artists[0].name;
                 var currentDevice = data.device.name;
-                document.getElementById("playingText").innerHTML = currentPlaying + " • " + currentArtist + " • " + currentDevice;
+                var popularity = data.item.popularity; document.getElementById("playingText").innerHTML = currentPlaying + " • " + currentArtist + " • " + currentDevice + "  " + popularity;
                 document.getElementById("playingText").scrollamount = 1;
             }
             else{
