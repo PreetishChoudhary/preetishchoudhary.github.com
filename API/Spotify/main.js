@@ -60,11 +60,9 @@ function GetPlayData(){
                 var currentArtist = data.item.artists[0].name;
                 var currentDevice = data.device.name;
                 var popularity = data.item.popularity; document.getElementById("playingText").innerHTML = currentPlaying + " • " + currentArtist + " • " + currentDevice + "  " + popularity;
-                document.getElementById("playingText").scrollamount = 1;
             }
             else{
-                document.getElementById("Final").innerHTML = "Player Offline"
-                document.getElementById("playingText").scrollamount = 0;
+                document.getElementById("Final").innerHTML = "Player Offline";
             }
         })
         .catch(error => {
