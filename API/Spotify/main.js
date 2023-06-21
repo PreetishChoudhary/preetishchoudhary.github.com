@@ -72,6 +72,7 @@ function GetPlayData(){
 
 function Player(){
     if(document.getElementById("playToggle").innerHTML == "Pause"){
+        console.log("Pausing...")
         fetch('https://api.spotify.com/v1/me/player/pause', {method: "PUT", headers: {'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),'Content-Type': 'application/json'}})
             .then(response => {
                 if (!response.ok) {
@@ -85,6 +86,7 @@ function Player(){
             });
     }
     else if(document.getElementById("playToggle").innerHTML == "Play"){
+        console.log("Playing...")
         fetch('https://api.spotify.com/v1/me/player/pause', {
             method: "PUT",
             headers: {
