@@ -6,8 +6,8 @@ body {
 
 #player {
     height: 120px;
-    width: 80%;
-    background-color: #2d4235;
+    width: 90%;
+    background-image: gradient(135deg, #2d4235, #2d4a38);
     color: #82b395;
     padding: none;
     margin-left: auto;
@@ -15,10 +15,17 @@ body {
 }
 
 #playingText{
-    font-size: 16px;
+    font-size: 24px;
     text-align: center;
-    padding-top: auto;
-    padding-bottom: auto;
+    vertical-align: center;
+}
+
+#sidebar{
+    height: 100%;
+    width: 10%
+    margin-left: 0;
+    margin-right: auto;
+    background-image: linear-gradient(135deg, #2b302d, #242e28)
 }
 
 button {
