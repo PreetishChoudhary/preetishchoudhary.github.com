@@ -11,9 +11,8 @@ function Oauth(){
 
 window.addEventListener('DOMContentLoaded', function() {
   var accessToken = localStorage.getItem('spotifyAccessToken');
-  if (accessToken) {
-      console.log(accessToken)
-  }
+    GetUserData();
+    GetPlayData();
 });
 
 function GetUserData(){}
