@@ -71,19 +71,20 @@ function GetPlayData(){
 }
 
 function Player(){
-    if(request == "pause"){
+    if(document.getElementById("playToggle").innerHTML == "Pause"){
         fetch('https://api.spotify.com/v1/me/player/pause', {method: "PUT", headers: {'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),'Content-Type': 'application/json'}})
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Request failed with status ' + response.status);
                 }
+                document.getElementById("playToggle").innerHTML = "Play"
                 console.log('Playback paused.');
             })
             .catch(error => {
               console.error('Error:', error);
             });
     }
-    else if(request == "play"){
+    else if(document.getElementById("playToggle").innerHTML == "Play"){
         fetch('https://api.spotify.com/v1/me/player/pause', {
             method: "PUT",
             headers: {
@@ -95,10 +96,11 @@ function Player(){
             if(!response.ok) {
                 throw new Error('Request failed with status ' + response.status);
             }
+            document.getElementById("playToggle").innerHTML = "Pause"
             console.log('playback resumed');
         })
         .catch(error =>{
-            console.error('Error': error);
+            console.error('Error:', error);
         })
     }
 }
