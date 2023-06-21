@@ -70,7 +70,7 @@ function GetPlayData(){
         });
 }
 
-function Player(request){
+function Player(){
     if(request == "pause"){
         fetch('https://api.spotify.com/v1/me/player/pause', {method: "PUT", headers: {'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),'Content-Type': 'application/json'}})
             .then(response => {
