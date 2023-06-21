@@ -66,6 +66,7 @@ function GetPlayData(){
             }
         })
         .catch(error => {
-          console.error('Error:', error);
+            console.error('Error:', error);
+            document.getElementById("Final").innerHTML = "Player Offline"
         });
 }
