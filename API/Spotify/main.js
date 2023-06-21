@@ -72,13 +72,7 @@ function GetPlayData(){
 
 function Player(request){
     if(request == "pause"){
-        fetch(https://api.spotify.com/v1/me/player/play, {
-            method: "PUT",
-            headers: {
-                'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),
-                    'Content-Type': 'application/json'
-            },
-        })
+        fetch('https://api.spotify.com/v1/me/player/pause', {method: "PUT", headers: {'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),'Content-Type': 'application/json'}})
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Request failed with status ' + response.status);
@@ -88,6 +82,23 @@ function Player(request){
             .catch(error => {
               console.error('Error:', error);
             });
-        }
+    }
+    else if(request == "play"){
+        fetch('https://api.spotify.com/v1/me/player/pause', {
+            method: "PUT",
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if(!response.ok) {
+                throw new Error('Request failed with status ' + response.status);
+            }
+            console.log('playback resumed');
+        })
+        .catch(error =>{
+            console.error('Error': error);
+        })
     }
 }
