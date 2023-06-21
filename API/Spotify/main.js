@@ -32,7 +32,7 @@ function GetUserData(){}
             var profilePicture = data.images[0].url;
     
           // Do something with the username and profile picture
-          document.getElementById("playingText").innerHTML = username + " • " + userID;
+          document.getElementById("Test").innerHTML = username + " • " + userID;
           document.getElementById("ProfilePicture").src = profilePicture;
         })
         .catch(error => {
@@ -59,7 +59,7 @@ function GetPlayData(){
                 var currentPlaying = data.item.name;
                 var currentArtist = data.item.artists[0].name;
                 var currentDevice = data.device.name;
-                document.getElementById("Final").innerHTML = currentPlaying + " • " + currentArtist + " • " + currentDevice;
+                document.getElementById("playingText").innerHTML = currentPlaying + " • " + currentArtist + " • " + currentDevice;
             }
             else{
                 document.getElementById("Final").innerHTML = "Player Offline"
