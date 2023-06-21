@@ -2,6 +2,13 @@ body {
     font-family: Arial, sans-serif;
 }
 
+header {
+    height: 30px;
+    width: 100%;
+    background-color: #2d4235;
+    color: #297546;    
+}
+
 button {
     padding: 10px 20px;
     background-color: #4CAF50;
