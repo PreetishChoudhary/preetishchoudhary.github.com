@@ -28,10 +28,11 @@ function GetUserData(){}
         .then(data => {
           // Access the user data
             var username = data.display_name;
+            var userID = data.id;
             var profilePicture = data.images[0].url;
     
           // Do something with the username and profile picture
-          document.getElementById("Test").innerHTML = 'Username: ' + username;
+          document.getElementById("Test").innerHTML = username + " • " + userID;
           document.getElementById("ProfilePicture").src = profilePicture;
         })
         .catch(error => {
@@ -56,10 +57,9 @@ function GetPlayData(){
           // Access the user data
             if(data.is_playing){
                 var currentPlaying = data.item.name;
-                console.log(currentPlaying);
                 var currentArtist = data.item.artists[0].name;
-                console.log(currentArtist);
-                document.getElementById("Final").innerHTML = 'Now Playing: ' + currentPlaying;
+                var currentDevice = data.device.name;
+                document.getElementById("Final").innerHTML = currentPlaying + " • " + currentArtist + " • " + currentDevice;
             }
             else{
                 document.getElementById("Final").innerHTML = "Player Offline"
@@ -68,51 +68,4 @@ function GetPlayData(){
         .catch(error => {
           console.error('Error:', error);
         });
-}
-
-function Player(){
-    if(document.getElementById("playToggle").innerHTML == "Pause"){
-        console.log("Pausing...")
-        fetch('https://api.spotify.com/v1/me/player/pause', {
-            method: "PUT",
-            headers: {
-                'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(response => {
-                if (!response.ok) {
-                    return response.json().then(errorData => {
-                        throw new Error('Failed to resume playback. Status: ' + response.status +'. Error: ' + errorData.error.message);
-                    })
-                }
-                document.getElementById("playToggle").innerHTML = "Play"
-                console.log('Playback paused.');
-            })
-            .catch(error => {
-              console.error('Error:', error);
-            });
-    }
-    else if(document.getElementById("playToggle").innerHTML == "Play"){
-        console.log("Playing...")
-        fetch('https://api.spotify.com/v1/me/player/play', {
-            method: "PUT",
-            headers: {
-                'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => {
-            if (!response.ok) {
-                return response.json().then(errorData => {
-                    throw new Error('Failed to resume playback. Status: ' + response.status +'. Error: ' + errorData.error.message);
-                })
-            }
-            document.getElementById("playToggle").innerHTML = "Pause"
-            console.log('playback resumed');
-        })
-        .catch(error =>{
-            console.error('Error:', error);
-        })
-    }
 }
