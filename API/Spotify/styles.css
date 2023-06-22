@@ -36,13 +36,13 @@ body {
 }
 
 @keyframes sideButton{
-    from {background-color: rgb(0,0,0,0)}
+    from {background-color: #2b302d}
     to {background-color: #384d40}
 }
 
 #sideButton:hover{
     animation: sideButton;
-    animation-duration: 2s;
+    animation-duration: 4s;
 }
 
 button {
