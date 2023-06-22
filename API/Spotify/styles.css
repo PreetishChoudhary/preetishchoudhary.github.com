@@ -6,6 +6,8 @@ body {
 }
 
 .reauth{
+    hidden: "hidden";
+    display: "none";
     width: 100%
     z-index: 1;
     color: rgb(0,0,0, 0.2)
@@ -14,7 +16,7 @@ body {
 #player {
     display: inline-block;
     height: 120px;
-    width: 85%;
+    width: 90%;
     background-image: linear-gradient(135deg, #2d4235, #2d4a38);
     color: #82b395;
     padding: none;
@@ -30,7 +32,7 @@ body {
 
 #sidebar{
     height: 600px;
-    width: 15%;
+    width: 10%;
     margin-left: 0;
     background-image: linear-gradient(135deg, #2b302d, #242e28)
 }
