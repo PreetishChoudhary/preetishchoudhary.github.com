@@ -7,7 +7,7 @@ body {
 
 #player {
     height: 120px;
-    width: 80%;
+    width: 85%;
     background-image: linear-gradient(135deg, #2d4235, #2d4a38);
     color: #82b395;
     padding: none;
@@ -23,7 +23,7 @@ body {
 
 #sidebar{
     height: 600px;
-    width: 20%;
+    width: 15%;
     margin-left: 0;
     background-image: linear-gradient(135deg, #2b302d, #242e28)
 }
