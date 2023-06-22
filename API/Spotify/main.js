@@ -31,7 +31,7 @@ function GetUserData(){}
             var profilePicture = data.images[0].url;
     
           // Do something with the username and profile picture
-          document.getElementById("Test").innerHTML = username + " • " + userID;
+          document.getElementById("username").innerHTML = username + " • " + userID;
           document.getElementById("ProfilePicture").src = profilePicture;
         })
         .catch(error => {
