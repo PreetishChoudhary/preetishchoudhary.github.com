@@ -12,6 +12,7 @@ body {
 }
 
 #player {
+    display: inline-block;
     height: 120px;
     width: 85%;
     background-image: linear-gradient(135deg, #2d4235, #2d4a38);
