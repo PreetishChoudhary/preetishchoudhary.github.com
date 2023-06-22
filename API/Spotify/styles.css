@@ -30,8 +30,9 @@ body {
 }
 
 #sideButton{
+    display: block;
     max-width:100%
-    max-height: 10%
+    max-height: 15%
 }
 
 @keyframes sideButton{
