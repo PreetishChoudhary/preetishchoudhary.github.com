@@ -33,10 +33,11 @@ body {
     display: block;
     width:100%
     max-height: 15%
+    background-color: rgb(0,0,0,0);
 }
 
 @keyframes sideButton{
-    from {background-color: #2b302d}
+    from {background-color: rgb(0,0,0,0)}
     to {background-color: #384d40}
 }
 
