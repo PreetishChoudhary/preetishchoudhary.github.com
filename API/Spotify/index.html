@@ -5,11 +5,20 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div id="sidebar">
-        <img id="ProfilePicture">
+    <div class="reAuth">
+        <div id="popup">
+            <p>Spotify requires you to refresh token after every hour.</p>
+            <button onclick="Oauth()">Reauthorize</button>
+        </div>
     </div>
-    <div id="player">
-        <p id="playingText">Player Offline</p>
+
+    <div class="page">
+        <div id="sidebar">
+            <img id="ProfilePicture">
+        </div>
+        <div id="player">
+            <p id="playingText">Player Offline</p>
+        </div>
     </div>
     <button onclick="GetPlayData()"><p>Get Play Data</p></button>
     <p id="Test">Test</p>
