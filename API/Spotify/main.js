@@ -12,7 +12,6 @@ function Oauth(){
 window.addEventListener('DOMContentLoaded', function() {
     var accessToken = localStorage.getItem('spotifyAccessToken');
     if(accessToken){
-        Oauth();
         GetUserData();
         GetPlayData();
     }
@@ -38,7 +37,8 @@ function GetUserData(){}
           document.getElementById("ProfilePicture").src = profilePicture;
         })
         .catch(error => {
-          console.error('Error:', error);
+            console.error('Error:', error);
+            Oauth();
         });
 
 function GetPlayData(){
