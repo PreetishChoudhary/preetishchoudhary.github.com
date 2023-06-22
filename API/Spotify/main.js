@@ -64,11 +64,11 @@ function GetPlayData(){
                 var popularity = data.item.popularity; document.getElementById("playingText").innerHTML = currentPlaying + " • " + currentArtist + " • " + currentDevice + "  " + popularity;
             }
             else{
-                document.getElementById("Final").innerHTML = "Player Offline";
+                document.getElementById("playingText").innerHTML = "Player Offline";
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            document.getElementById("Final").innerHTML = "Player Offline"
+            document.getElementById("playingText").innerHTML = "Player Offline"
         });
 }
