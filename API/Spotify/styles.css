@@ -5,14 +5,6 @@ body {
     padding: none;
 }
 
-.reauth{
-    hidden: "hidden";
-    display: "none";
-    width: 100%
-    z-index: 1;
-    color: rgb(0,0,0, 0.2)
-}
-
 #player {
     display: inline-block;
     height: 120px;
@@ -20,7 +12,6 @@ body {
     background-image: linear-gradient(135deg, #2d4235, #2d4a38);
     color: #82b395;
     padding: none;
-    margin-right: 0;
 }
 
 #playingText{
@@ -31,6 +22,7 @@ body {
 }
 
 #sidebar{
+    display: inline-block;
     height: 600px;
     width: 10%;
     margin-left: 0;
