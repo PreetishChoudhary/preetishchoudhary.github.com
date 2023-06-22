@@ -5,6 +5,12 @@ body {
     padding: none;
 }
 
+.reauth{
+    width: 100%
+    z-index: 1;
+    color: rgb(0,0,0, 0.2)
+}
+
 #player {
     height: 120px;
     width: 85%;
