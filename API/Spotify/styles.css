@@ -16,6 +16,10 @@ body {
     height: 90wh;
 }
 
+#main{
+    padding:none;
+}
+
 #player {
     flex: 0 0 80%;
     background-image: linear-gradient(135deg, #2d4235, #2d4a38);
