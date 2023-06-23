@@ -11,7 +11,7 @@ body {
 }
 
 #player {
-    flex: 0 0 90%;
+    flex: 0 0 80%;
     background-image: linear-gradient(135deg, #2d4235, #2d4a38);
     color: #82b395;
     padding: 0;
@@ -40,6 +40,11 @@ body {
 }
 
 #sidebar {
+    flex: 0 0 10%;
+    background-image: linear-gradient(135deg, #2b302d, #242e28);
+}
+
+#albumArt {
     flex: 0 0 10%;
     background-image: linear-gradient(135deg, #2b302d, #242e28);
 }
