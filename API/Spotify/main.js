@@ -60,8 +60,15 @@ function GetPlayData(){
             if(data.is_playing){
                 var currentPlaying = data.item.name;
                 var currentArtist = data.item.artists[0].name;
+                var currentAlbum = data.item.album.name;
+                var currentAlbumArt = data.item.album.images[0].url;
                 var currentDevice = data.device.name;
-                var popularity = data.item.popularity; document.getElementById("playingText").innerHTML = currentPlaying + " • " + currentArtist + " • " + currentDevice + "  " + popularity;
+                var popularity = data.item.popularity; 
+                
+                document.getElementById("songPlaying").innerHTML = currentPlaying;
+                document.getElementById("artistPlaying").innerHTML = currentArtist;
+                document.getElementById("albumPlaying").innerHTML = currentAlbum;
+                document.getElementById("albumPlayingArt").src = currentAlbumArt;
             }
             else{
                 document.getElementById("playingText").innerHTML = "Player Offline";
