@@ -16,11 +16,10 @@ body {
     color: #82b395;
     padding: 0;
     height: 10vw;
-    text-align: right;
+    text-align: center;
 }
 
 .playingText {
-    float: right;
     display: block;
     text-align: center;
     vertical-align: middle;
