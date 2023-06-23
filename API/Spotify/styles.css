@@ -10,6 +10,12 @@ body {
     height: 100vh;
 }
 
+#placeholder{
+    display: flex;
+    width: 90vw;
+    height: 90wh;
+}
+
 #player {
     flex: 0 0 80%;
     background-image: linear-gradient(135deg, #2d4235, #2d4a38);
