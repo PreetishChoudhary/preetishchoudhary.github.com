@@ -38,7 +38,6 @@ function GetUserData(){}
         })
         .catch(error => {
             console.error('Error:', error);
-            Oauth();
         });
 
 function GetPlayData(){
@@ -71,11 +70,11 @@ function GetPlayData(){
                 document.getElementById("albumPlayingArt").src = currentAlbumArt;
             }
             else{
-                document.getElementById("playingText").innerHTML = "Player Offline";
+                document.getElementById("songPlaying").innerHTML = "Player Offline";
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            document.getElementById("playingText").innerHTML = "Player Offline"
+            document.getElementById("songPlaying").innerHTML = "Player Offline"
         });
 }
