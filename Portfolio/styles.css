@@ -1,0 +1,31 @@
+:root{
+  --background: rgba(17,36,34,80);
+  --text: rgba(255,255,255,60);
+}
+
+body{
+  background-color: var(--background);
+}
+
+#nav:link, #nav:visited{
+  margin: 10px;
+  color: var(--text);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+@keyframes navHover{
+  from{color: --text;}
+  to{color: rgba(265,265,265,90);}
+}
+
+#nav:hover{
+  margin: 10px;
+  color: var(--text);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  animation-name: navHover;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
