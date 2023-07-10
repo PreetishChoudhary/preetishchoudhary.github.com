@@ -11,8 +11,7 @@ body{
   display: inline-block;
 }
 
-#nav a:link,
-#nav a:visited{
+a.nav:link, a.nav:visited{
   text-decoration: none;
   margin: 10px;
   color: var(--text);
@@ -25,7 +24,7 @@ body{
   to{color: rgba(265,265,265,90);}
 }
 
-#nav a:hover{
+a.nav:hover{
   margin: 10px;
   color: var(--text);
   writing-mode: vertical-rl;
