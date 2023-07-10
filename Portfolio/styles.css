@@ -4,6 +4,7 @@
 }
 
 body {
+  overflow: hidden;
   background-color: var(--background);
   position: relative; /* Added to make .hamburger position relative to the body */
   height: 100vh; /* Added to ensure the body takes up the full viewport height */
