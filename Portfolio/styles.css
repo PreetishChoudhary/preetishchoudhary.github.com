@@ -1,17 +1,22 @@
-:root{
-  --background: rgba(17,36,34,80);
-  --text: rgba(255,255,255,60);
+:root {
+  --background: rgba(17, 36, 34, 80);
+  --text: rgba(255, 255, 255, 60);
 }
 
-body{
+body {
   background-color: var(--background);
 }
 
-#hamburger{
+#hamburger {
   display: inline-block;
+  position: fixed; /* or position: absolute; */
+  top: 5%; /* 5% from the top */
+  right: 5%; /* 5% from the right */
+  transform: rotate(90deg);
 }
 
-a.nav:link, a.nav:visited{
+a.nav:link,
+a.nav:visited {
   text-decoration: none;
   margin: 10px;
   color: var(--text);
@@ -19,12 +24,16 @@ a.nav:link, a.nav:visited{
   text-orientation: mixed;
 }
 
-@keyframes navHover{
-  from{color: --text;}
-  to{color: rgba(265,265,265,90);}
+@keyframes navHover {
+  from {
+    color: --text;
+  }
+  to {
+    color: rgba(265, 265, 265, 90);
+  }
 }
 
-a.nav:hover{
+a.nav:hover {
   margin: 10px;
   color: var(--text);
   writing-mode: vertical-rl;
