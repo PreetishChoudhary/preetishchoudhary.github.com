@@ -20,9 +20,8 @@ body {
 
 .hamburger {
   position: absolute;
-  top: 5%;
-  right: 5%;
-  transform: rotate(90deg);
+  top: 3%;
+  right: 1%;
   display: flex; /* Added to make the nav links display in a row */
   flex-direction: column; /* Added to make the nav links stack vertically */
   align-items: flex-start; /* Added to align the nav links to the left */
