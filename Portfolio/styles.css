@@ -5,14 +5,27 @@
 
 body {
   background-color: var(--background);
+  position: relative; /* Added to make .hamburger position relative to the body */
+  height: 100vh; /* Added to ensure the body takes up the full viewport height */
+  margin: 0; /* Added to remove default body margin */
 }
 
-#hamburger {
-  display: inline-block;
-  position: fixed; /* or position: absolute; */
-  top: 5%; /* 5% from the top */
-  right: 5%; /* 5% from the right */
+.heading {
+  padding: 20px;
+}
+
+.Projects {
+  padding: 20px;
+}
+
+.hamburger {
+  position: absolute;
+  top: 5%;
+  right: 5%;
   transform: rotate(90deg);
+  display: flex; /* Added to make the nav links display in a row */
+  flex-direction: column; /* Added to make the nav links stack vertically */
+  align-items: flex-start; /* Added to align the nav links to the left */
 }
 
 a.nav:link,
