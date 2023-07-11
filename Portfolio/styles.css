@@ -11,8 +11,23 @@ body {
   margin: 0; /* Added to remove default body margin */
 }
 
+@keyframes headingOnLoad{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
 .heading {
-  padding: 20px;
+  color: var(--text);
+  font-family: "Helvitica", Arial, sans-serif;
+  font-size: 48px;
+  animation: headingOnLoad;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
 .Projects {
@@ -30,7 +45,7 @@ body {
 
 a.nav:link,
 a.nav:visited {
-  opacity: 0.8;
+  opacity: 0.85;
   text-decoration: none;
   margin: 10px;
   color: var(--text);
@@ -54,7 +69,7 @@ a.nav:hover {
   writing-mode: vertical-rl;
   text-orientation: mixed;
   animation-name: navHover;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
