@@ -6,7 +6,7 @@
 body {
   overflow: hidden;
   background-color: var(--background);
-  position: absolute; /* Added to make .hamburger position relative to the body */
+  position: relative; /* Added to make .hamburger position relative to the body */
   height: 100vh; /* Added to ensure the body takes up the full viewport height */
   margin: 0; /* Added to remove default body margin */
 }
@@ -56,36 +56,3 @@ a.nav:hover {
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
-
-.parallax-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.dark-room {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://www.istockphoto.com/photos/dark-room');
-}
-
-.desk {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F774%2F387%2Fpng-transparent-black-wooden-desk-table-writing-desk-office-drawer-best-free-desk-miscellaneous-angle-furniture-thumbnail.png&tbnid=l_h6RXFg21lGhM&vet=12ahUKEwie14Xhp4WAAxVMzqACHYzbAWEQMygAegUIARDJAQ..i&imgrefurl=https%3A%2F%2Fwww.pngwing.com%2Fen%2Fsearch%3Fq%3Ddesk&docid=btGPQTEUOe3oaM&w=360&h=273&q=dark%20desk%20no%20background%20&ved=2ahUKEwie14Xhp4WAAxVMzqACHYzbAWEQMygAegUIARDJAQ');
-}
-
-.computer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url('https://www.pngaaa.com/detail/569383');
-}
-
