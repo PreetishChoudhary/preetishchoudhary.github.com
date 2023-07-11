@@ -24,19 +24,20 @@ body {
 @keyframes headingOnLoad{
   from{
     opacity: 0;
-    left: 50%
+    left: 40%
   }
   to{
     opacity: 1;
-    left: 30%
+    left: 20%
   }
 }
 
 .heading {
+  text-align: center;
   position: absolute;
   color: var(--text);
   top: 45%;
-  left: 50%;
+  left: 40%;
   font-family: Monaco, "Lucida Console", monospace;
   font-size: 60px;
   animation: headingOnLoad;
