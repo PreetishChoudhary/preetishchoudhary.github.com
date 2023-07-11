@@ -51,6 +51,7 @@ body {
 }
 
 .hamburger {
+  font-family: monospace;
   position: absolute;
   top: 10%;
   right: 2%;
