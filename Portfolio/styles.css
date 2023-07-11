@@ -16,9 +16,9 @@
 body {
   overflow: hidden;
   background-color: var(--background);
-  position: relative; /* Added to make .hamburger position relative to the body */
-  height: 100vh; /* Added to ensure the body takes up the full viewport height */
-  margin: 0; /* Added to remove default body margin */
+  position: relative;
+  height: 100vh;
+  margin: 0;
 }
 
 @keyframes headingOnLoad{
@@ -30,6 +30,12 @@ body {
     opacity: 1;
     left: 10%
   }
+}
+
+div{
+  display: block;
+  width: 1vw;
+  height: 1vh;
 }
 
 .heading {
@@ -44,7 +50,7 @@ body {
   animation-duration: 2s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
-}
+
 
 .Projects {
   padding: 20px;
