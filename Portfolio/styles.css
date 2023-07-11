@@ -1,6 +1,6 @@
 :root {
-  --background: rgba(17, 36, 34, 80);
-  --text: rgba(255, 255, 255, 60);
+  --background: rgba(255, 255, 255, 100);
+  --text: rgba(50, 50, 50, 80);
 }
 
 body {
@@ -30,6 +30,7 @@ body {
 
 a.nav:link,
 a.nav:visited {
+  opacity: 0.8;
   text-decoration: none;
   margin: 10px;
   color: var(--text);
@@ -42,11 +43,12 @@ a.nav:visited {
     color: --text;
   }
   to {
-    color: rgba(265, 265, 265, 90);
+    color: rgba(0, 0, 0, 90);
   }
 }
 
 a.nav:hover {
+  opacity: 1;
   margin: 10px;
   color: var(--text);
   writing-mode: vertical-rl;
