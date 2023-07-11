@@ -14,18 +14,21 @@ body {
 @keyframes headingOnLoad{
   from{
     opacity: 0;
+    left: 50%
   }
   to{
     opacity: 1;
+    left: 30%
   }
 }
 
 .heading {
   color: var(--text);
-  font-family: "Helvitica", Arial, sans-serif;
-  font-size: 48px;
+  top: 45%;
+  font-family: Monaco, "Lucida Console", monospace;
+  font-size: 60px;
   animation: headingOnLoad;
-  animation-duration: 4s;
+  animation-duration: 2s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
