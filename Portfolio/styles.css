@@ -14,7 +14,8 @@
 }
 
 body {
-  overflow: hidden;
+  position: fixed;
+  overflow-y: scroll;
   background-color: var(--background);
   position: relative;
   height: 100vh;
@@ -44,6 +45,16 @@ body {
   animation-duration: 2s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
+}
+
+.about{
+  text-align: center;
+  position: absolute;
+  color: var(--text);
+  top: 150%;
+  left: 45%;
+  font-family: "Lucida Console", monospace;
+  font-size: 48px;
 }
 
 .Projects {
