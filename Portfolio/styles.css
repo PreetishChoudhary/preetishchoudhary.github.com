@@ -25,6 +25,7 @@ body {
 .heading {
   color: var(--text);
   top: 45%;
+  left: 50%
   font-family: Monaco, "Lucida Console", monospace;
   font-size: 60px;
   animation: headingOnLoad;
