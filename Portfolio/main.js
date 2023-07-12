@@ -57,7 +57,7 @@ const Phrases = [
   "Preetish Choudhary"
 ]
 
-const rand = document.querySelector('.heading')
+const rand = document.querySelector('#head')
 const fx = new TextScramble(rand)
 
 let counter = 0
