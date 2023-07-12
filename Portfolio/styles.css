@@ -57,6 +57,48 @@ body {
   font-size: 48px;
 }
 
+.work{
+  text-align: center;
+  position: absolute;
+  color: var(--text);
+  top: 250%;
+  left: 15%;
+  font-family: "Lucida Console", monospace;
+  font-size: 48px;
+}
+
+.lab{
+  text-align: center;
+  position: absolute;
+  color: var(--text);
+  top: 350%;
+  left: 45%;
+  font-family: "Lucida Console", monospace;
+  font-size: 48px;
+}
+
+.contact{
+  text-align: center;
+  position: absolute;
+  color: var(--text);
+  top: 450%;
+  left: 15%;
+  font-family: "Lucida Console", monospace;
+  font-size: 48px;
+}
+
+.footer{
+  text-align: center;
+  position: absolute;
+  color: var(--text);
+  width: 1vw;
+  height: 0.5vh;
+  top: 550%;
+  left: 45%;
+  font-family: "Lucida Console", monospace;
+  font-size: 48px;
+}
+
 .Projects {
   padding: 20px;
 }
