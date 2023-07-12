@@ -54,7 +54,7 @@ body {
   top: 150%;
   left: 45%;
   font-family: "Lucida Console", monospace;
-  font-size: 48px;
+  font-size: 36px;
 }
 
 .work{
@@ -104,13 +104,19 @@ body {
 }
 
 .hamburger {
+  font-size: 20px; 
   font-family: monospace;
-  position: absolute;
-  top: 5%;
-  right: 1%;
+  position: fixed;
+  top: 10%;
+  right: 0%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.nav{
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 a.nav:link,
