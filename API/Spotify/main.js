@@ -20,6 +20,7 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 function UpdateData(){
+    console.log('1');
     GetPlayData();
     if (localStorage.getItem('TokenActive') == "false"){
         clearTimeout(UpdateData());
