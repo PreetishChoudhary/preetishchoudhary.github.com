@@ -11,13 +11,22 @@ function Oauth(){
 
 window.addEventListener('DOMContentLoaded', function() {
     var accessToken = localStorage.getItem('spotifyAccessToken');
+    localStorage.setItem('TokenActive', "False");
     if(accessToken){
+        localStorage.setItem('TokenActive', "True");
         GetUserData();
-        GetPlayData();
+        setInterval(UpdateData(), 5000);
     }
 });
 
-function GetUserData(){}
+function UpdateData(){
+    GetPlayData();
+    if (localStorage.getItem('TokenActive') == "false"){
+        clearTimeout(UpdateData());
+    };
+}
+
+function GetUserData(){
     fetch('https://api.spotify.com/v1/me', {
             method: "GET",
             headers: {
@@ -39,6 +48,7 @@ function GetUserData(){}
         .catch(error => {
             console.error('Error:', error);
         });
+}
 
 function GetPlayData(){
     fetch('https://api.spotify.com/v1/me/player', {
@@ -76,5 +86,6 @@ function GetPlayData(){
         .catch(error => {
             console.error('Error:', error);
             document.getElementById("songPlaying").innerHTML = "Player Offline"
+            localStorage.setItem('TokenActive', "False");
         });
 }
