@@ -15,15 +15,17 @@ window.addEventListener('DOMContentLoaded', function() {
     if(accessToken){
         localStorage.setItem('TokenActive', "True");
         GetUserData();
-        setInterval(UpdateData(), 5000);
+        setInterval(UpdateData, 5000);
     }
 });
+
+var updateInterval;
 
 function UpdateData(){
     console.log('1');
     GetPlayData();
     if (localStorage.getItem('TokenActive') == "false"){
-        clearTimeout(UpdateData());
+        clearTimeout(updateInterval);
     };
 }
 
