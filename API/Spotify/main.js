@@ -42,7 +42,7 @@ function GetUserData(){
           // Access the user data
             var username = data.display_name;
             var userID = data.id;
-            var profilePicture = data.images[0].url;
+            var profilePicture = data.images.find(image => image.width >= 300 && image.height >= 300);
     
           // Do something with the username and profile picture
           document.getElementById("username").innerHTML = username + " • " + userID;
