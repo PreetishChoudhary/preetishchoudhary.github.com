@@ -6,7 +6,8 @@ body {
 }
 .page {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
+    min-height: 100vh;
 }
 #placeholder{
     display: flex;
