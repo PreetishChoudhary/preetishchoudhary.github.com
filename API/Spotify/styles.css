@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* This prevents horizontal overflow */
 }
 
 .page {
@@ -10,10 +11,10 @@ body {
     height: 100vh;
 }
 
-#placeholder{
+#placeholder {
     display: flex;
     width: 90vw;
-    height: 90wh;
+    height: 90vh; /* Use vh instead of wh */
 }
 
 #player {
@@ -32,15 +33,15 @@ body {
     animation: my-animation 15s linear infinite;
 }
 
-#albumPlaying{
+#albumPlaying {
     font-size: 16px;
 }
 
-#songPlaying{
+#songPlaying {
     font-size: 24px;
 }
 
-#artistPlaying{
+#artistPlaying {
     font-size: 20px;
 }
 
@@ -76,17 +77,17 @@ p {
     max-width: 100%;
 }
 
-#albumPlayingArt{
-    aspect-ratio: 1 /1;
+#albumPlayingArt {
+    aspect-ratio: 1 / 1;
     max-height: 100%;
 }
-  
+
 #sideButton {
     display: block;
     width: 100%;
     max-height: 15%;
     background-color: rgba(0, 0, 0, 0);
-    color: #82b395; 
+    color: #82b395;
     border: none;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -94,10 +95,10 @@ p {
 
 @keyframes sideButton {
     from {
-      background-color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
     }
     to {
-      background-color: #1c422b;
+        background-color: #1c422b;
     }
 }
 
@@ -106,4 +107,3 @@ p {
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
 }
-
