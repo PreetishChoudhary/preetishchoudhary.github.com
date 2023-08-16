@@ -115,8 +115,10 @@ function GetPlayTime(){
         .then(data => {
             if(data.is_playing){
                 var timestamp = data.timestamp;
-                var progress = data.progress_ms;
+                var progress = data.progress_ms.substring(0,3);
+                progress = progress.substring(0,1) + ":" + progress.substring(1,3)
                 var duration = data.item.duration_ms;
+                duration = duration.substring(0,1) + ":" + duration.substring(1,3);
                 console.log(timestamp + " " + progress + " " + duration)
             }
         })
