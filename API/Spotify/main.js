@@ -92,3 +92,27 @@ function GetPlayData(){
             localStorage.setItem('TokenActive', "False");
         });
 }
+
+function GetPlayTime(){
+    fetch('https://api.spotify.com/v1/me/player/currently-playing', {
+        method: "GET",
+        headers: {
+            'Authorization': 'Bearer ' + localStorage.getItem('spotifyAccessToken'),
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Request failed with status ' + response.status);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if(data.is_playing){
+                var timestamp = data.timestamp;
+                var progress = data.progress_ms;
+                var duration = data.item.duration_ms;
+                console.log(timestamp + " " + progress + " " + duration)
+            }
+        })
+}
