@@ -23,6 +23,7 @@ var updateInterval;
 
 function UpdateData(){
     console.log('1');
+    GetUserData();
     GetPlayData();
     if (localStorage.getItem('TokenActive') == "false"){
         clearTimeout(updateInterval);
