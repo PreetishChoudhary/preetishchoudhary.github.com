@@ -88,7 +88,11 @@ function GetPlayData(){
         })
         .catch(error => {
             console.error('Error:', error);
-            document.getElementById("songPlaying").innerHTML = "Player Offline"
+            document.getElementById("songPlaying").innerHTML = "Player Offline";
+            document.getElementById("albumPlaying").innerHTML = "";
+            document.getElementById("artistPlaying").innerHTML = "";
+            document.getElementById("albumPlayingArt").src = "images/noAlbumArt.jpg";
+            
             localStorage.setItem('TokenActive', "False");
         });
 }
