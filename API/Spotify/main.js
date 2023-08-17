@@ -85,6 +85,9 @@ function GetPlayData(){
             }
             else{
                 document.getElementById("songPlaying").innerHTML = "Player Offline";
+                document.getElementById("albumPlaying").innerHTML = "";
+                document.getElementById("artistPlaying").innerHTML = "";
+                document.getElementById("albumPlayingArt").src = "images/noAlbumArt.jpg";
             }
         })
         .catch(error => {
