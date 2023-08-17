@@ -31,9 +31,8 @@ body {
 
 .playingText {
     display: block;
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
-    animation: my-animation 15s linear infinite;
 }
 
 #albumPlaying{
@@ -41,10 +40,12 @@ body {
 }
 
 #songPlaying{
+    top: 40%
     font-size: 24px;
 }
 
 #artistPlaying{
+    top: 60%;
     font-size: 20px;
 }
 
