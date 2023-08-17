@@ -25,6 +25,7 @@ function UpdateData(){
     console.log('1');
     GetUserData();
     GetPlayData();
+    GetPlayTime();
     if (localStorage.getItem('TokenActive') == "false"){
         clearTimeout(updateInterval);
     };
@@ -122,6 +123,7 @@ function GetPlayTime(){
                 progress = progress.substring(0,1) + ":" + progress.substring(1,3)
                 var duration = data.item.duration_ms;
                 duration = duration.substring(0,1) + ":" + duration.substring(1,3);
+                document.getElementById("playTime").innerHTML = progress + " / " + duration;
                 console.log(timestamp + " " + progress + " " + duration)
             }
         })
